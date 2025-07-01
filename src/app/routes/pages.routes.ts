@@ -3,5 +3,6 @@ import { HomePageComponent } from "../pages/home-page/home-page.component";
 import { AuthGuard } from '../auth/auth.guard';
 
 export default [
-    { path: 'home', component: HomePageComponent, canActivate: [AuthGuard] }
+    { path: 'home', component: HomePageComponent, canActivate: [AuthGuard] },
+    { path: '', redirectTo: 'home', pathMatch: 'full' }
 ] as Routes;
